@@ -37,8 +37,8 @@ end
 module TestHelper
   let(:inspec_src) { Inspec.src_root }
   let(:inspec_bin_path) { File.join(inspec_src, 'bin', 'inspec') }
-  let(:resource_pack_root) { File.expand_path('..')}
-  let(:fixtures_path) { File.join(resource_pack_root, 'fixtures') }
+  let(:resource_pack_root) { File.expand_path('.')}
+  let(:fixtures_path) { File.join(resource_pack_root, 'test', 'fixtures') }
 
   TRAIN_CONNECTION = Train.create('local', command_runner: :generic).connection
 

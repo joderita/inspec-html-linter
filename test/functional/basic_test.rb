@@ -18,6 +18,7 @@ describe 'a basic test suite' do
       command_line += File.join(fixtures_path, 'profiles', 'basic')
 
       run_result = run_inspec_with_json(command_line)
+      run_result.stderr.must_be_empty
       run_result.exit_status.must_equal(100)
     end
   end
