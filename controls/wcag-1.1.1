@@ -1,0 +1,26 @@
+# encoding: utf-8
+# copyright: 2017, The Authors
+
+title 'Non-text Content (Level A)'
+
+# When:
+#  * an html file contains the 'img' element
+#  * and it doesn't contain the 'alt' text
+#  *   Then the control should fail
+#  *   Then the failure message should include 'This image doesn't comply with WCAG standards'
+
+
+# you can also use plain tests
+describe file('/tmp') do
+  it { should be_directory }
+end
+
+# you add controls here
+control 'wcag-1.1.1' do                        # A unique ID for this control
+  impact 1.0                                # The criticality, if this control fails.
+  title 'Create /tmp directory'             # A human-readable title
+  desc 'An optional description...'
+  describe file('/tmp') do                  # The actual test
+    it { should be_directory }
+  end
+end

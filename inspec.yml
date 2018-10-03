@@ -1,0 +1,8 @@
+name: inspec-html-linter
+title: InSpec Profile to lint static HTML files
+maintainer: Jody Wolfborn
+copyright: Copyright 2018 Jody Wolfborn
+copyright_email: jody.wolfborn@gmail.com
+license: Apache-2.0
+summary: An InSpec Compliance Profile to perform lint tests against static HTML files
+version: 0.1.0
