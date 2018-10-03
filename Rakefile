@@ -3,11 +3,11 @@
 require 'rake/testtask'
 
 Rake::TestTask.new do |t|
-  t.libs.push 'lib'
+  # t.libs.push 'libraries'
   t.test_files = FileList[
     'test/unit/*_test.rb',
     'test/integration/*_test.rb',
-    'test/fucntion/*_test.rb',
+    'test/functional/*_test.rb',
   ]
   t.verbose = true
   # Ideally, we'd run tests with warnings enabled,
